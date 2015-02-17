@@ -44,5 +44,19 @@ namespace BinarySearch.Test
 
             Assert.AreEqual(2, result);
         }
+
+        [TestMethod]
+        public void BinarySearch_CorrectlySurroundsWhereValueWouldBe_WhenValueIsNotThere()
+        {
+            int[] arr = { 1, 2, 3, 4, 5, 7, 8, 9, 10 };
+
+            int min = 0;
+            int max = arr.Length - 1;
+            int? result = Binary.Search(ref min, ref max, i => 6.CompareTo(arr[i]));
+
+            Assert.IsFalse(result.HasValue);
+            Assert.AreEqual(4, min);
+            Assert.AreEqual(5, max);
+        }
     }
 }

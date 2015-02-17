@@ -11,14 +11,11 @@ namespace BinarySearch
         /// <param name="maxIndex">The maximum index allowed</param>
         /// <param name="compareToResult">Compare the item at the given index to the desired result (-1 less than, 0 equal to, 1 greater than)</param>
         /// <returns></returns>
-        public static int? Search(int minIndex, int maxIndex, Func<int, int> compareToResult)
+        public static int? Search(ref int minIndex, ref int maxIndex, Func<int, int> compareToResult)
         {
-            int high = maxIndex;
-            int low = minIndex;
-
-            while (high >= low)
+            while (maxIndex >= minIndex)
             {
-                var mid = low + ((high - low) / 2);
+                var mid = minIndex + ((maxIndex - minIndex) / 2);
 
                 var c = compareToResult(mid);
 
@@ -27,13 +24,31 @@ namespace BinarySearch
                     return mid;
 
                 if (c > 0)
-                    low = mid + 1;
+                    minIndex = mid + 1;
                 else
-                    high = mid - 1;
+                    maxIndex = mid - 1;
             }
 
             //Not found :(
+
+            //Swap min and max into right order
+            var tmp = maxIndex;
+            maxIndex = minIndex;
+            minIndex = tmp;
+
             return null;
+        }
+
+        /// <summary>
+        /// Perform a binary search
+        /// </summary>
+        /// <param name="minIndex">The minimum index allowed</param>
+        /// <param name="maxIndex">The maximum index allowed</param>
+        /// <param name="compareToResult">Compare the item at the given index to the desired result (-1 less than, 0 equal to, 1 greater than)</param>
+        /// <returns></returns>
+        public static int? Search(int minIndex, int maxIndex, Func<int, int> compareToResult)
+        {
+            return Search(ref minIndex, ref maxIndex, compareToResult);
         }
     }
 }
