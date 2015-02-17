@@ -10,7 +10,7 @@ namespace BinarySearch.Test
         {
             int[] arr = { 17 };
 
-            int? result = BinarySearch.Find(0, arr.Length - 1, i => arr[0].CompareTo(arr[i]));
+            int? result = Binary.Search(0, arr.Length - 1, i => arr[0].CompareTo(arr[i]));
 
             Assert.AreEqual(0, result);
         }
@@ -20,7 +20,7 @@ namespace BinarySearch.Test
         {
             int[] arr = { };
 
-            int? result = BinarySearch.Find(0, arr.Length - 1, i => arr[0].CompareTo(arr[i]));
+            int? result = Binary.Search(0, arr.Length - 1, i => arr[0].CompareTo(arr[i]));
 
             Assert.IsFalse(result.HasValue);
         }
@@ -30,7 +30,7 @@ namespace BinarySearch.Test
         {
             int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            int? result = BinarySearch.Find(0, arr.Length - 1, i => arr[7].CompareTo(arr[i]));
+            int? result = Binary.Search(0, arr.Length - 1, i => arr[7].CompareTo(arr[i]));
 
             Assert.AreEqual(7, result);
         }
@@ -40,7 +40,7 @@ namespace BinarySearch.Test
         {
             int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            int? result = BinarySearch.Find(0, arr.Length - 1, i => arr[2].CompareTo(arr[i]));
+            int? result = Binary.Search(0, arr.Length - 1, i => arr[2].CompareTo(arr[i]));
 
             Assert.AreEqual(2, result);
         }
