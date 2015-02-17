@@ -1,0 +1,12 @@
+*.suo
+
+*.ncrunchproject
+
+*.ncrunchsolution
+*.cache
+
+BinarySearch/obj
+BinarySearch/bin
+
+BinarySearch.Test/obj
+BinarySearch.Test/bin
