@@ -11,3 +11,7 @@ BinarySearch/bin
 
 BinarySearch.Test/obj
 BinarySearch.Test/bin
+
+build
+
+.vs/
