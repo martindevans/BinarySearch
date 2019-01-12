@@ -1,9 +1,10 @@
 *.suo
-
 *.ncrunchproject
-
+*.ncrunchsolution.user
 *.ncrunchsolution
 *.cache
+
+_ReSharper.Caches
 
 BinarySearch/obj
 BinarySearch/bin
