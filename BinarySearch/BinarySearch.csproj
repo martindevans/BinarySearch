@@ -1,15 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net40</TargetFrameworks>
-    <Title>BinarySearch</Title>
-    <Description>Performs binary searches (not necessarily on arrays)</Description>
-    <Product>Copyright © 2018</Product>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>3.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Martin Evans</Authors>
-    <Company />
-    <PackageLicenseUrl>https://github.com/martindevans/BinarySearch/blob/master/LICENSE.md</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/martindevans/BinarySearch</PackageProjectUrl>
     <PackageOutputPath>../build</PackageOutputPath>
   </PropertyGroup>
 

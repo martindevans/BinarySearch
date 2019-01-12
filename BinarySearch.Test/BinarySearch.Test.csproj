@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BinarySearch\BinarySearch.csproj">
-      <Project>{3078fc0e-1aea-4a5c-aa9a-a67f6f52ae7b}</Project>
+      <Project>{947ac2d5-5df7-43d2-80bb-d4bb87c8ab3e}</Project>
       <Name>BinarySearch</Name>
     </ProjectReference>
   </ItemGroup>
